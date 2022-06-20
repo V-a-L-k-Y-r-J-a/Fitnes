@@ -1,0 +1,29 @@
+﻿<Window x:Class="Fit.Window_List"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Fit"
+        mc:Ignorable="d"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+          Title="Список трениров" Height="450" Width="1000">
+    <Grid>
+        <Button Content="Назад"  Name="LogOutBtn" Click="LogOutBtn_Click" Width="100" Margin="10,15,0,350" HorizontalAlignment="Left"/>
+
+        <DataGrid Name="CoachDGrid"
+                  AutoGenerateColumns="False"
+                  ColumnWidth="*"
+                  CanUserAddRows="False"
+                  Margin="181,15,25,15"
+                  IsReadOnly="True"
+                  SelectionChanged="CoachDGrid_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Имя" Binding="{Binding LastNam}"/>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding FristNam}" />
+                <DataGridTextColumn Header="Отчество" Binding="{Binding Patromym}"/>
+                <DataGridTextColumn Header="Телефон" Binding="{Binding Phones}"/>
+                <DataGridTextColumn Header="Описание" Binding="{Binding Description}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

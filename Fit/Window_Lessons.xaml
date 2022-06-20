@@ -1,0 +1,30 @@
+﻿<Window x:Class="Fit.Window_Lessons"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Fit"
+        mc:Ignorable="d"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+          Title="Занятия" Height="450" Width="600">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="59*"/>
+            <ColumnDefinition Width="541*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Назад"  Name="LogOutBtn" Click="LogOuytBtn_Click" Width="100" Margin="10,34,0,368" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
+
+        <DataGrid Name="trainingDGrid"
+                  AutoGenerateColumns="False"
+                  ColumnWidth="*"
+                  CanUserAddRows="False"
+                  Margin="122,15,10,15"
+                  IsReadOnly="True"
+                  SelectionChanged="trainingDGrid_SelectionChanged" Grid.Column="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Названия тренировки" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Цена" Binding="{Binding TrainingPlace}" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

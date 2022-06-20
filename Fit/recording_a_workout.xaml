@@ -1,0 +1,35 @@
+﻿<Window x:Class="Fit.recording_a_workout"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Fit"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Запись на тренировку" HorizontalAlignment="Center"  Height="550" Width="600">
+    <Grid>
+
+        <Border MinWidth="400" Margin="15" VerticalAlignment="Center" Padding="35" MaxWidth="550" CornerRadius="20" >
+
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0" />
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="Запись на тренировку" FontSize="30" FontWeight="Bold" Margin="0 0 0 20" />
+                <Grid Margin="0 0 0 20" >
+                    <Button HorizontalAlignment="Left" Content="Назад" Click="Button_Entr_Click" Style="{StaticResource MaterialDesignFlatButton}" Cursor="Hand" Margin="408,0,0,0" Height="32" VerticalAlignment="Top"/>
+                </Grid>
+                <TextBox x:Name="textBoxLastNames" materialDesign:HintAssist.Hint="Введите Фамилию" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Cursor="Arrow"/>
+                <TextBox x:Name="textBoxFirstNames" materialDesign:HintAssist.Hint="Введите Имя" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Cursor="Arrow"/>
+                <TextBox x:Name="textBoxPatronymics" materialDesign:HintAssist.Hint="Введите Отчество" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Cursor="Arrow"/>
+                <TextBox x:Name="textBoxPhone" materialDesign:HintAssist.Hint="Введите телефон" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Cursor="Arrow"/>
+                <TextBox x:Name="textBoxMedicalCart" materialDesign:HintAssist.Hint="Введите номер мед.карты" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Cursor="Arrow"/>
+                <TextBox x:Name="textBoxTypeTraining" materialDesign:HintAssist.Hint="Введите вид тренировки" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Cursor="Arrow"/>
+
+                <Button Content="Зарегистрироваться" Margin="0 0 0 20" Click="Button_Redi_Click"/>
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</Window>
+
